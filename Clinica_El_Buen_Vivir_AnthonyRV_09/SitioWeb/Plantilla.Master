@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Plantilla.master.cs" Inherits="SitioWeb.Plantilla" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Clinica el buen vivir</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">function MostrarMensaje(mensaje){
+        alert(mensaje);
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container">
+     <!--Barra de navegacion-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary rounded">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="Inicio.aspx" style="color: white;">Clinica el buen vivir</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="Inicio.aspx" style="color: white;">Inicio</a>
+                <a class="nav-link" href="Pacientes.aspx" style="color: white;">Pacientes</a>
+                <a class="nav-link" href="AgendarCitas.aspx" style="color: white;">Agendar cita</a>
+                <a class="nav-link" href="Citas.aspx" style="color: white;">Ver citas</a>
+             </div>
+            </div>
+        </div>
+    </nav>
+        <br />
+
+
+        <!--Cuerpo de la pagina-->
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+
+        <!--Pie de pagina-->
+        <footer>
+        <div class="p-3 bg-primary text-white text-center rounded-pill">
+            &copy; 2023 Clinica el buen vivir. Todos los derechos reservados / Desarrollado por Anthony Rodriguez
+            <asp:ContentPlaceHolder ID="ContenidoFooter" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        </footer>
+    </div>
+</body>
+</html>
